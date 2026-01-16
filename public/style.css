@@ -1,36 +1,134 @@
+:root {
+  --pink-bg: #fff1f5;
+  --pink-primary: #ec4899;
+  --pink-secondary: #f472b6;
+  --pink-soft: #fce7f3;
+  --text-dark: #374151;
+  --text-light: #6b7280;
+  --white: #ffffff;
+}
+
+/* 🌷 GLOBAL STYLES */
 body {
-  background: #f4f8fb;
-  font-family: Arial;
+  background: linear-gradient(135deg, #fff1f5, #fde2e4);
+  font-family: 'Poppins', sans-serif;
   margin: 0;
+  color: var(--text-dark);
+  min-height: 100vh;
 }
 
+/* 🌸 HEADER */
 header {
-  background: #6a8caf;
+  background: linear-gradient(135deg, #ec4899, #f472b6);
   color: white;
-  padding: 15px;
+  padding: 18px;
   text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(236, 72, 153, 0.35);
 }
 
+/* 🌷 CARDS & BOXES */
 .card, .box {
-  background: white;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.9);
+  margin: 20px auto;
+  padding: 22px;
+  border-radius: 18px;
+  max-width: 420px;
+  box-shadow:
+    0 10px 25px rgba(236, 72, 153, 0.15),
+    inset 0 0 0 1px rgba(255, 182, 193, 0.4);
+  backdrop-filter: blur(6px);
 }
 
-button {
-  background: #6a8caf;
-  color: white;
-  padding: 10px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
+/* 🌸 HEADINGS */
+h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #be185d;
+  margin-bottom: 10px;
 }
 
+/* 🌷 TEXT */
+p {
+  font-size: 14.5px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* 🌸 INPUTS */
 input, select, textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px 14px;
   margin-top: 10px;
+  border-radius: 12px;
+  border: 1.5px solid #fbcfe8;
+  background: var(--pink-soft);
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--pink-primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.15);
+}
+
+/* 🌷 BUTTONS */
+button {
+  margin-top: 15px;
+  background: linear-gradient(135deg, #ec4899, #f472b6);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(236, 72, 153, 0.4);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(236, 72, 153, 0.55);
+}
+
+/* 🌸 SOFT MENTAL-HEALTH TEXT */
+.soft {
+  color: #db2777;
+  font-size: 13.5px;
+  margin-top: 6px;
+}
+
+/* 🌷 NOTES */
+.note {
+  font-size: 12px;
+  color: #9d174d;
+  opacity: 0.85;
+}
+
+/* 🌸 UL LISTS */
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* 🌷 FOOTER FEEL (OPTIONAL) */
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #9d174d;
+  opacity: 0.7;
+  margin-top: 30px;
 }
