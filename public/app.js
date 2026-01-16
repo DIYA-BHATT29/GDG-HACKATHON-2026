@@ -8,6 +8,15 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
+function generateQR() {
+  fetch("http://localhost:3000/generate-qr")
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById("qrImage").src = data.qrImage;
+      document.getElementById("qrStatus").innerText =
+        "QR active for 5 minutes ⏳";
+    });
+}
 // LOGIN
 function login() {
   const role = document.getElementById("role").value;
